@@ -1,0 +1,283 @@
+{
+  "brands": [
+    "Audi",
+    "BMW",
+    "Bentley",
+    "Datsun",
+    "Ferrari",
+    "Force",
+    "Ford",
+    "Honda",
+    "Hyundai",
+    "ISUZU",
+    "Isuzu",
+    "Jaguar",
+    "Jeep",
+    "Kia",
+    "Land Rover",
+    "Lexus",
+    "MG",
+    "Mahindra",
+    "Maruti",
+    "Maserati",
+    "Mercedes-AMG",
+    "Mercedes-Benz",
+    "Mini",
+    "Nissan",
+    "Porsche",
+    "Renault",
+    "Rolls-Royce",
+    "Skoda",
+    "Tata",
+    "Toyota",
+    "Volkswagen",
+    "Volvo"
+  ],
+  "brand_to_models": {
+    "Audi": [
+      "A4",
+      "A6",
+      "A8",
+      "Q7"
+    ],
+    "BMW": [
+      "3",
+      "5",
+      "6",
+      "7",
+      "X1",
+      "X3",
+      "X4",
+      "X5",
+      "Z4"
+    ],
+    "Bentley": [
+      "Continental"
+    ],
+    "Datsun": [
+      "GO",
+      "RediGO",
+      "redi-GO"
+    ],
+    "Ferrari": [
+      "GTC4Lusso"
+    ],
+    "Force": [
+      "Gurkha"
+    ],
+    "Ford": [
+      "Aspire",
+      "Ecosport",
+      "Endeavour",
+      "Figo",
+      "Freestyle"
+    ],
+    "Honda": [
+      "Amaze",
+      "CR",
+      "CR-V",
+      "City",
+      "Civic",
+      "Jazz",
+      "WR-V"
+    ],
+    "Hyundai": [
+      "Aura",
+      "Creta",
+      "Elantra",
+      "Grand",
+      "Santro",
+      "Tucson",
+      "Venue",
+      "Verna",
+      "i10",
+      "i20"
+    ],
+    "ISUZU": [
+      "MUX"
+    ],
+    "Isuzu": [
+      "D-Max",
+      "MUX"
+    ],
+    "Jaguar": [
+      "F-PACE",
+      "XE",
+      "XF"
+    ],
+    "Jeep": [
+      "Compass",
+      "Wrangler"
+    ],
+    "Kia": [
+      "Carnival",
+      "Seltos"
+    ],
+    "Land Rover": [
+      "Rover"
+    ],
+    "Lexus": [
+      "ES",
+      "NX",
+      "RX"
+    ],
+    "MG": [
+      "Hector"
+    ],
+    "Mahindra": [
+      "Alturas",
+      "Bolero",
+      "KUV",
+      "KUV100",
+      "Marazzo",
+      "Scorpio",
+      "Thar",
+      "XUV300",
+      "XUV500"
+    ],
+    "Maruti": [
+      "Alto",
+      "Baleno",
+      "Celerio",
+      "Ciaz",
+      "Dzire LXI",
+      "Dzire VXI",
+      "Dzire ZXI",
+      "Eeco",
+      "Ertiga",
+      "Ignis",
+      "S-Presso",
+      "Swift",
+      "Swift Dzire",
+      "Vitara",
+      "Wagon R",
+      "XL6"
+    ],
+    "Maserati": [
+      "Ghibli",
+      "Quattroporte"
+    ],
+    "Mercedes-AMG": [
+      "C"
+    ],
+    "Mercedes-Benz": [
+      "C-Class",
+      "CLS",
+      "E-Class",
+      "GL-Class",
+      "GLS",
+      "S-Class"
+    ],
+    "Mini": [
+      "Cooper"
+    ],
+    "Nissan": [
+      "Kicks",
+      "X-Trail"
+    ],
+    "Porsche": [
+      "Cayenne",
+      "Macan",
+      "Panamera"
+    ],
+    "Renault": [
+      "Duster",
+      "KWID",
+      "Triber"
+    ],
+    "Rolls-Royce": [
+      "Ghost"
+    ],
+    "Skoda": [
+      "Octavia",
+      "Rapid",
+      "Superb"
+    ],
+    "Tata": [
+      "Altroz",
+      "Harrier",
+      "Hexa",
+      "Nexon",
+      "Safari",
+      "Tiago",
+      "Tigor"
+    ],
+    "Toyota": [
+      "Camry",
+      "Fortuner",
+      "Glanza",
+      "Innova",
+      "Yaris"
+    ],
+    "Volkswagen": [
+      "Polo",
+      "Vento"
+    ],
+    "Volvo": [
+      "S90",
+      "XC",
+      "XC60",
+      "XC90"
+    ]
+  },
+  "seller_types": [
+    "Dealer",
+    "Individual",
+    "Trustmark Dealer"
+  ],
+  "fuel_types": [
+    "CNG",
+    "Diesel",
+    "Electric",
+    "LPG",
+    "Petrol"
+  ],
+  "transmission_types": [
+    "Automatic",
+    "Manual"
+  ],
+  "feature_ranges": {
+    "vehicle_age": {
+      "min": 0.0,
+      "max": 29.0,
+      "median": 6.0,
+      "mean": 6.041130936762005
+    },
+    "km_driven": {
+      "min": 100.0,
+      "max": 3800000.0,
+      "median": 50000.0,
+      "mean": 55639.5823274731
+    },
+    "mileage": {
+      "min": 4.0,
+      "max": 33.54,
+      "median": 19.67,
+      "mean": 19.697332721070588
+    },
+    "engine": {
+      "min": 793.0,
+      "max": 6592.0,
+      "median": 1248.0,
+      "mean": 1486.1715429021253
+    },
+    "max_power": {
+      "min": 38.4,
+      "max": 626.0,
+      "median": 88.5,
+      "mean": 100.60765219102596
+    },
+    "seats": {
+      "min": 2.0,
+      "max": 9.0,
+      "median": 5.0,
+      "mean": 5.3268171083705065
+    }
+  },
+  "segment_names": {
+    "0": "Modern Daily Commuter (Hatchback/Compact)",
+    "1": "Luxury & High-Performance Vehicle",
+    "2": "7-Seater Family SUV / MPV",
+    "3": "Budget & Entry-Level Used Car"
+  }
+}
