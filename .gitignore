@@ -1,6 +1,11 @@
 # Virtual Environments
 .venv/
 .vrnv/
+
+# Stray Empty Files (artifact of initial VS Code sessions)
+4
+872
+data/cardekho+dataset_
 venv/
 env/
 ENV/
