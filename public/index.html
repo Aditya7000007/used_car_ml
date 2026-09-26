@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f1">
+  <meta name="description" content="Explore used-car price estimates, a transparent age and mileage screening rule, and similar marketplace listings.">
+  <title>AutoLens — Used Car Insights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ⚙️ BACKEND URL — update this after you deploy to Render.com -->
+  <!-- Replace YOUR_RENDER_URL with your actual Render service URL -->
+  <script>window.RENDER_BACKEND_URL = "YOUR_RENDER_URL";</script>
+
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="AutoLens home"><span class="brand-mark">A</span><span>autolens<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#analyzer">Price analyzer</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+    <a class="header-link" href="#analyzer">Explore a car <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A clearer way to shop pre-owned</p>
+        <h1>Find the value<br>behind the <span>drive.</span></h1>
+        <p class="hero-text">Explore a data-based price estimate, compare similar listings, and check a simple age-and-mileage screening rule.</p>
+        <a class="button button-dark" href="#analyzer">Analyze a vehicle <span aria-hidden="true">↓</span></a>
+        <div class="hero-proof"><span class="proof-stars" aria-hidden="true">✳</span><span>Built from 15,244 marketplace listings</span><span class="proof-divider"></span><span>India used-car market</span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative abstract car illustration">
+        <div class="art-sun"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-label"><span class="art-label-dot"></span> PRICE. SPECS. CONTEXT.</div>
+        <svg class="car-illustration" viewBox="0 0 680 300" role="img" aria-label="Illustration of a car on a road">
+          <path d="M74 228h535" class="road-line"/>
+          <path d="M111 197c9-8 22-17 33-24l48-62c9-12 23-19 38-21l132-14c19-2 37 4 51 18l53 53 67 17c14 4 23 16 23 30v29H102v-8c0-7 3-13 9-18Z" class="car-body"/>
+          <path d="m208 108-48 62 149-7V93l-47 5c-23 2-42 6-54 10Z" class="car-window"/>
+          <path d="m324 93 36-4c18-2 31 4 44 17l46 56-126 1Z" class="car-window"/>
+          <path d="M335 95v61" class="window-divider"/>
+          <path d="M128 175h31m345 1h35" class="car-detail"/>
+          <circle cx="205" cy="225" r="37" class="wheel-outer"/><circle cx="205" cy="225" r="21" class="wheel-inner"/><circle cx="205" cy="225" r="7" class="wheel-center"/>
+          <circle cx="501" cy="225" r="37" class="wheel-outer"/><circle cx="501" cy="225" r="21" class="wheel-inner"/><circle cx="501" cy="225" r="7" class="wheel-center"/>
+          <path d="M564 181h18c8 0 14 6 14 14v7h-31Z" class="headlight"/>
+          <path d="M103 192h18v19h-21v-9c0-4 1-7 3-10Z" class="tail-light"/>
+        </svg>
+        <div class="art-caption"><span>01 / 03</span><span>USED CAR INTELLIGENCE</span></div>
+      </div>
+    </section>
+
+    <section class="analyzer-section" id="analyzer">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE VEHICLE CHECK</p><h2>Bring the details.<br><span>Get a better picture.</span></h2></div>
+          <p>Enter what you know about the car. We'll estimate a price and find nearby listings with similar specifications.</p>
+        </div>
+
+        <div class="analyzer-grid">
+          <form id="car-form" class="form-card">
+            <div class="card-heading"><div><span class="step-number">01</span><h3>Vehicle details</h3></div><span class="required-note">All fields required</span></div>
+            <div class="field-grid">
+              <label class="field field-wide">Make / brand<select id="brand" name="brand" required><option value="">Loading brands…</option></select></label>
+              <label class="field field-wide">Model<select id="model" name="model" required disabled><option value="">Choose a brand first</option></select></label>
+              <label class="field">Vehicle age <span class="unit">years</span><input id="vehicle_age" name="vehicle_age" type="number" step="1" value="5" required></label>
+              <label class="field">Odometer <span class="unit">km</span><input id="km_driven" name="km_driven" type="number" step="1000" value="45000" required></label>
+              <label class="field">Fuel economy <span class="unit">km/l</span><input id="mileage" name="mileage" type="number" step="0.1" value="18.5" required></label>
+              <label class="field">Engine <span class="unit">cc</span><input id="engine" name="engine" type="number" step="1" value="1197" required></label>
+              <label class="field">Maximum power <span class="unit">bhp</span><input id="max_power" name="max_power" type="number" step="0.1" value="82" required></label>
+              <label class="field">Seats<select id="seats" name="seats" required><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></label>
+              <label class="field">Seller type<select id="seller_type" name="seller_type" required></select></label>
+              <label class="field">Fuel type<select id="fuel_type" name="fuel_type" required></select></label>
+              <label class="field field-wide">Transmission<select id="transmission_type" name="transmission_type" required></select></label>
+            </div>
+            <div id="form-error" class="form-error" role="alert" hidden></div>
+            <button id="submit-button" class="button button-accent submit-button" type="submit"><span>Analyze this car</span><span aria-hidden="true">↗</span></button>
+            <p class="form-footnote"><span aria-hidden="true">◈</span> Your inputs are analyzed locally by this project. Nothing is submitted to a third-party service.</p>
+          </form>
+
+          <section class="results-column" aria-live="polite" aria-busy="false">
+            <div id="empty-state" class="empty-card">
+              <div class="empty-icon">✳</div><p class="eyebrow">YOUR SNAPSHOT</p><h3>Ready when you are.</h3><p>Submit the vehicle details to see an estimated price, a screening flag, and similar listings.</p>
+              <div class="empty-checklist"><span>01 <b>Price estimate</b></span><span>02 <b>Vehicle segment</b></span><span>03 <b>Comparable listings</b></span></div>
+            </div>
+            <div id="results" hidden>
+              <div class="result-topline"><div><p class="eyebrow">YOUR SNAPSHOT</p><h3 id="result-car-name">Vehicle analysis</h3></div><span class="live-pill"><span></span> ANALYSIS READY</span></div>
+              <div class="result-cards">
+                <article class="result-card price-card"><div class="result-label">Estimated price <span>01</span></div><div id="result-price" class="result-value">—</div><div id="result-price-range" class="result-meta">Illustrative ±8% range</div></article>
+                <article class="result-card"><div class="result-label">Market segment <span>02</span></div><div id="result-segment" class="result-value result-value-small">—</div><div id="result-cluster" class="result-meta">K-means cluster</div></article>
+                <article id="screening-card" class="result-card screening-card"><div class="result-label">Age + mileage check <span>03</span></div><div id="result-screening" class="result-value result-value-small">—</div><div class="result-meta">Project-defined screening rule</div></article>
+              </div>
+              <div class="market-card"><div><p class="eyebrow">LOCAL COMPARISON</p><h4>Closest listing average</h4></div><div class="market-price"><strong id="result-average">—</strong><span id="result-difference">—</span></div></div>
+              <div class="transparency-note"><span aria-hidden="true">ⓘ</span><p>The price band is a fixed illustrative range, not a statistical confidence interval. The age-and-mileage flag is a simple rule, not a mechanical inspection.</p></div>
+            </div>
+          </section>
+        </div>
+
+        <section id="listings-section" class="listings-section" hidden>
+          <div class="listings-heading"><div><p class="eyebrow">THE NEAR MATCHES</p><h3>Similar listings</h3></div><p>Ranked by standardized vehicle specifications<br><span>Similarity score is not a probability.</span></p></div>
+          <div class="table-scroll"><table><thead><tr><th>Vehicle</th><th>Price</th><th>Age</th><th>Odometer</th><th>Fuel economy</th><th>Segment</th><th>Similarity</th></tr></thead><tbody id="listings-body"></tbody></table></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="method-section wrap">
+      <div class="method-intro"><p class="eyebrow">A TOOL FOR CONTEXT</p><h2>Useful signals.<br><span>Clear limits.</span></h2><p>AutoLens brings a few machine-learning techniques together to help you explore a listing. Use the results as a starting point for your own research.</p></div>
+      <div class="method-cards">
+        <article class="method-card"><span class="method-index">01 / PRICE</span><div class="method-symbol">↗</div><h3>Price estimate</h3><p>A Random Forest model estimates the listing price from vehicle specifications and marketplace data.</p></article>
+        <article class="method-card"><span class="method-index">02 / SCREENING</span><div class="method-symbol">⌁</div><h3>Age + mileage rule</h3><p>The flag is set when age is at least 8 years and odometer reading is at least 70,000 km. It is a project heuristic, not a real-world risk model.</p></article>
+        <article class="method-card"><span class="method-index">03 / SIMILARITY</span><div class="method-symbol">◎</div><h3>Comparable listings</h3><p>K-means assigns a broad market segment. Nearest Neighbors finds listings with similar age, usage, economy, engine, power, and seating.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark">A</span><span>autolens<span class="brand-dot">.</span></span></a><p>A portfolio project for used-car exploration.</p><span>Built with machine learning · India</span></div></footer>
+</body>
+</html>
